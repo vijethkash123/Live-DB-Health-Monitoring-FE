@@ -184,3 +184,50 @@
   outline: none;
   display: none;
 }
+
+.circle-text3 {
+  display: table-cell;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: #D2222D;
+  color: #fff;
+  font: 18px "josefin sans", arial;
+}
+
+.circle-text1 {
+  display: table-cell;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: #238823;
+  color: #fff;
+  font: 18px "josefin sans", arial;
+}
+
+.circle-text2 {
+  display: table-cell;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  background:#FFBF00;
+  color: #fff;
+  font: 18px "josefin sans", arial;
+}
+
+.circle-text4 {
+  display: table-cell;
+  height: 10px;
+  width: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  color: #fff;
+  font: 18px "josefin sans", arial;
+}

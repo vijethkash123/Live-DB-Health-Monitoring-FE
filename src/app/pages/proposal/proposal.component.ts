@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
     templateUrl: 'proposal.component.html'
 })
 
-export class ProposalComponent{}
+export class ProposalComponent{
+}

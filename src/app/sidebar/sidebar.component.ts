@@ -14,7 +14,6 @@ export const ROUTES: RouteInfo[] = [
     { path: '/contracts',          title: 'Contract (Initiation)',icon:'nc-glasses-2',class: '' }, //maps
     { path: '/delivery', title: 'Delivery (Execution)',icon:'nc-check-2',class: '' }, //notifications
     { path: '/closure',          title: 'Closure',icon:'nc-trophy',class: '' },    //user
-    { path:'/table', title:'Table List', icon:'nc-tile-56', class:'' }
 
 
 

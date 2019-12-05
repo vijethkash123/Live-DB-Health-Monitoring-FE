@@ -6,7 +6,7 @@ import {MatTabsModule} from '@angular/material';
 
 import { SidebarModule } from './sidebar/sidebar.module';
 import { NavbarModule} from './shared/navbar/navbar.module';
-import { FixedPluginModule} from './shared/fixedplugin/fixedplugin.module';
+//import { FixedPluginModule} from './shared/fixedplugin/fixedplugin.module';
 
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
@@ -28,7 +28,6 @@ import {HttpClient,HttpClientModule} from '@angular/common/http';
     SidebarModule,
     NavbarModule,
     ToastrModule.forRoot(),
-    FixedPluginModule,
     HttpClientModule
   ],
   providers: [],

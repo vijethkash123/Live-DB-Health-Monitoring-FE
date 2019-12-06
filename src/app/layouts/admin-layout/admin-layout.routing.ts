@@ -5,13 +5,12 @@ import { ClosureComponent } from '../../pages/closure/closure.component';
 import { ProposalComponent } from '../../pages/proposal/proposal.component';
 import { ContractsComponent } from '../../pages/contracts/contracts.component';
 import { DeliveryComponent } from '../../pages/delivery/delivery.component';
-import { UpgradeComponent } from '../../pages/upgrade/upgrade.component';
-
+import {NewdealComponent} from '../../pages/newdeal/newdeal.component';
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'closure',           component: ClosureComponent },
     { path: 'proposal',          component: ProposalComponent },
     { path: 'contracts',           component: ContractsComponent },
     { path: 'delivery',  component: DeliveryComponent },
-    { path: 'upgrade',        component: UpgradeComponent }
+    { path: 'newdeal',  component:NewdealComponent }
 ];

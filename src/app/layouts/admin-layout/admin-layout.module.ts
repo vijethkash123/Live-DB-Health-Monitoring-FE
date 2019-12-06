@@ -11,7 +11,7 @@ import { ClosureComponent }            from '../../pages/closure/closure.compone
 import { ProposalComponent }           from '../../pages/proposal/proposal.component';
 import { ContractsComponent }            from '../../pages/contracts/contracts.component';
 import { DeliveryComponent }   from '../../pages/delivery/delivery.component';
-import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component';
+import {NewdealComponent} from '../../pages/newdeal/newdeal.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -26,10 +26,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   declarations: [
     DashboardComponent,
     ClosureComponent,
-    UpgradeComponent,
     ProposalComponent,
     ContractsComponent,
-    DeliveryComponent
+    DeliveryComponent,
+    NewdealComponent
   ]
 })
 

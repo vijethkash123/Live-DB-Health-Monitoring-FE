@@ -11,6 +11,8 @@ export interface RouteInfo {
 export const ROUTES: RouteInfo[] = [
     { path: '/dashboard',     title: 'Dashboard', icon:'nc-atom',class: '' },
     { path: '/proposal',         title: 'Proposal (Deal Cycle)',icon:'nc-chart-pie-36',class: '' }, //icons
+    { path: '/newdeal',         title: '° New Deal',icon:'',class: '' },
+    { path: '/renewal',         title: '° Renewal',icon:'',class: '' },
     { path: '/contracts',          title: 'Contract (Initiation)',icon:'nc-glasses-2',class: '' }, //maps
     { path: '/delivery', title: 'Delivery (Execution)',icon:'nc-check-2',class: '' }, //notifications
     { path: '/closure',          title: 'Closure',icon:'nc-trophy',class: '' },    //user

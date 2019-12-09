@@ -12,7 +12,7 @@ import { ProposalComponent }           from '../../pages/proposal/proposal.compo
 import { ContractsComponent }            from '../../pages/contracts/contracts.component';
 import { DeliveryComponent }   from '../../pages/delivery/delivery.component';
 import {NewdealComponent} from '../../pages/newdeal/newdeal.component';
-
+import {RenewalComponent} from '../../pages/renewal/renewal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -29,7 +29,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ProposalComponent,
     ContractsComponent,
     DeliveryComponent,
-    NewdealComponent
+    NewdealComponent,
+    RenewalComponent
   ]
 })
 

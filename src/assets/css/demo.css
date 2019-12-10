@@ -231,3 +231,6 @@
   color: #fff;
   font: 18px "josefin sans", arial;
 }
+.pointer{
+  cursor: pointer; 
+}

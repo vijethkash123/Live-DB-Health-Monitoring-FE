@@ -11,7 +11,7 @@
           <div class="col-7 col-md-8">
             <div class="numbers">
               <p class="card-category">New Proposal/Active Projects</p>
-              <p class="card-title"  style="font-size: 20px;"> {{project_data}}
+              <p class="card-title" style="font-size: 20px;"> {{project_data}}
                 <p>
             </div>
           </div>
@@ -20,7 +20,7 @@
       <div class="card-footer ">
         <hr>
         <div class="stats">
-          <i class="fa fa-clock-o"></i><a href="google.com">More info</a>
+          <i class="fa fa-clock-o"></i><a class="pointer">More info</a>
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@
       <div class="card-footer ">
         <hr>
         <div class="stats">
-          <i class="fa fa-clock-o"></i><a href="google.com">More info</a>
+          <i class="fa fa-clock-o"></i><a class="pointer" (click)="codex_call()">More info</a>
         </div>
       </div>
     </div>
@@ -75,7 +75,7 @@
       <div class="card-footer ">
         <hr>
         <div class="stats">
-          <i class="fa fa-clock-o"></i><a href="google.com">More info</a>
+          <i class="fa fa-clock-o"></i><a class="pointer" (click)="customer_call()">More info</a>
         </div>
       </div>
     </div>
@@ -92,7 +92,7 @@
           <div class="col-7 col-md-8">
             <div class="numbers">
               <p class="card-category">Digital Index Score</p>
-              <p class="card-title"  style="font-size: 20px; margin-top: 12px;">+45K
+              <p class="card-title" style="font-size: 20px; margin-top: 12px;">+45K
                 <p>
             </div>
           </div>
@@ -101,7 +101,7 @@
       <div class="card-footer ">
         <hr>
         <div class="stats">
-          <i class="fa fa-clock-o"></i><a href="google.com">More info</a>
+          <i class="fa fa-clock-o"></i><a class="pointer" (click)="di_call()">More info</a>
         </div>
       </div>
     </div>
@@ -110,8 +110,33 @@
 
 
 <br>
+<!-- <div class="card" *ngIf="isCodex">
+    <div class="card-body">
 
+    </div>
+  </div> -->
+<div class="card" *ngIf="isCodex">
+  <div class="card-body">
+    <iframe width="100%" height="550px"
+      src="https://app.powerbi.com/view?r=eyJrIjoiMTRjNjVmMjUtNTY4ZS00YWJhLWIzZTQtYmQ3N2MyZWQ1MTJjIiwidCI6Ijk3OTg0YzJiLWEyMjktNDYwOS04MTg1LWFlODQ5NDdiYzNmYyIsImMiOjEwfQ%3D%3D"
+      frameborder="0" allowfullscreen="true"></iframe>
+  </div>
+</div>
+<div class="card" *ngIf="isCustomer">
+  <div class="card-body">
+    <iframe width="100%" height="550px"
+      src="https://app.powerbi.com/view?r=eyJrIjoiMzY4Zjg1YzItMjY5Mi00NTQzLWE0MjgtYTIyM2Y5MTVlOTBhIiwidCI6Ijk3OTg0YzJiLWEyMjktNDYwOS04MTg1LWFlODQ5NDdiYzNmYyIsImMiOjEwfQ%3D%3D"
+      frameborder="0" allowfullscreen="true"></iframe>
+  </div>
+</div>
 
+<div class="card" *ngIf="isDi">
+  <div class="card-body">
+    <iframe width="100%" height="900"
+      src="https://app.powerbi.com/view?r=eyJrIjoiNzg2MzUxNGQtODBlYi00ZGFmLWE0YmYtNmQ0YjdkNDY5MGFkIiwidCI6Ijk3OTg0YzJiLWEyMjktNDYwOS04MTg1LWFlODQ5NDdiYzNmYyIsImMiOjEwfQ%3D%3D"
+      frameborder="0" allowfullscreen="true"></iframe>
+  </div>
+</div>
 <div class="card">
   <div class="card-body">
     <h4 class="card-title" style="color:#34b070;">Welcome to Digital Infrastructure Services Library</h4>

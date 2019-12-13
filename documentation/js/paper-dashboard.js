@@ -1,18 +1,3 @@
-/*!
-
-  =========================================================
-  * Paper Dashboard PRO - V1.2.1
-  =========================================================
-
-  * Product Page: https://www.creative-tim.com/product/paper-dashboard-pro
-  * Available with purchase of license from https://www.creative-tim.com/product/paper-dashboard-pro
-  * Copyright 2017 Creative Tim (https://www.creative-tim.com)
-  * License Creative Tim (https://www.creative-tim.com/license)
-
-  =========================================================
-
-*/
-
 var fixedTop = false;
 
 var mobile_menu_visible = 0,
@@ -22,36 +7,36 @@ var mobile_menu_visible = 0,
     $sidebar,
     isWindows;
 
-(function(){
+(function() {
     isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
 
-    if (isWindows){
-       // if we are on windows OS we activate the perfectScrollbar function
-       $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+    if (isWindows) {
+        // if we are on windows OS we activate the perfectScrollbar function
+        $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
 
-       $('html').addClass('perfect-scrollbar-on');
-   } else {
-       $('html').addClass('perfect-scrollbar-off');
-   }
+        $('html').addClass('perfect-scrollbar-on');
+    } else {
+        $('html').addClass('perfect-scrollbar-off');
+    }
 })();
 
-$(document).ready(function(){
+$(document).ready(function() {
     window_width = $(window).width();
     $sidebar = $('.sidebar');
 
     // We put modals out of wrapper to working properly
     $('.modal').appendTo("body");
 
-    if($('body').hasClass('sidebar-mini')){
+    if ($('body').hasClass('sidebar-mini')) {
         pdp.misc.sidebar_mini_active = true;
     }
 
     pdp.initSidebarsCheck();
     pdp.initMinimizeSidebar();
 
-    $('.form-control').on("focus", function(){
+    $('.form-control').on("focus", function() {
         $(this).parent('.input-group').addClass("input-group-focus");
-    }).on("blur", function(){
+    }).on("blur", function() {
         $(this).parent(".input-group").removeClass("input-group-focus");
     });
 
@@ -60,17 +45,17 @@ $(document).ready(function(){
 
 
     $('.switch').bootstrapSwitch({
-        onColor:'primary'
+        onColor: 'primary'
     });
 
     $('.switch-plain').bootstrapSwitch({
-        onColor:'',
+        onColor: '',
         onText: '',
         offText: ''
     });
 
     $('.switch-icon').bootstrapSwitch({
-        onColor:'',
+        onColor: '',
         onText: '<i class="fa fa-check"></i>',
         offText: '<i class="fa fa-times"></i>'
     });
@@ -78,16 +63,16 @@ $(document).ready(function(){
 
     //Activate tags
     //removed class label and label-color from tag span and replaced with data-color
-    if($(".tagsinput").length != 0){
+    if ($(".tagsinput").length != 0) {
         var tagClass = $('.tagsinput').data('color');
 
         $('.tagsinput').tagsinput({
-            tagClass: ' tag-'+ tagClass +' '
+            tagClass: ' tag-' + tagClass + ' '
         });
     }
 
     //  Init Bootstrap Select Picker
-    if($(".selectpicker").length != 0){
+    if ($(".selectpicker").length != 0) {
         $(".selectpicker").selectpicker();
     }
 
@@ -96,27 +81,27 @@ $(document).ready(function(){
 
 
 // activate collapse right menu when the windows is resized
-$(window).resize(function(){
+$(window).resize(function() {
     pdp.initSidebarsCheck();
 
 });
 
 pdp = {
-    misc:{
+    misc: {
         navbar_menu_visible: 0,
         active_collapse: true,
         disabled_collapse_init: 0
 
     },
-    initSidebarsCheck: function(){
+    initSidebarsCheck: function() {
         // Init navigation toggle for small screens
-        if($(window).width() <= 991){
-            if($sidebar.length != 0){
+        if ($(window).width() <= 991) {
+            if ($sidebar.length != 0) {
                 pdp.initSidebarMenu();
             } else {
                 pdp.initBootstrapNavbarMenu();
             }
-        } else if(mobile_menu_initialized == true){
+        } else if (mobile_menu_initialized == true) {
             // reset all the additions that we made for the sidebar wrapper only if the screen is bigger than 991px
             $sidebar_wrapper.find('.navbar-form').remove();
             $sidebar_wrapper.find('.nav-mobile-menu').remove();
@@ -125,44 +110,44 @@ pdp = {
         }
     },
 
-    initMinimizeSidebar: function(){
-        $('#minimizeSidebar').click(function(){
+    initMinimizeSidebar: function() {
+        $('#minimizeSidebar').click(function() {
             var $btn = $(this);
 
-            if(pdp.misc.sidebar_mini_active == true){
+            if (pdp.misc.sidebar_mini_active == true) {
                 $('body').removeClass('sidebar-mini');
                 $btn.html('<i class="ti-more-alt"></i>');
                 pdp.misc.sidebar_mini_active = false;
 
-            }else{
+            } else {
                 $('body').addClass('sidebar-mini');
                 $btn.html('<i class="ti-menu-alt"></i>');
                 pdp.misc.sidebar_mini_active = true;
             }
 
-            // we simulate the window Resize so the charts will get updated in realtime.
-            var simulateWindowResize = setInterval(function(){
+
+            var simulateWindowResize = setInterval(function() {
                 window.dispatchEvent(new Event('resize'));
-            },180);
+            }, 180);
 
             // we stop the simulation of Window Resize after the animations are completed
-            setTimeout(function(){
+            setTimeout(function() {
                 clearInterval(simulateWindowResize);
-            },1000);
+            }, 1000);
         });
     },
 
-    initSidebarMenu: function(){
+    initSidebarMenu: function() {
         $sidebar_wrapper = $('.sidebar-wrapper');
 
-        if(!mobile_menu_initialized){
+        if (!mobile_menu_initialized) {
 
             $navbar = $('nav').find('.navbar-collapse').first().clone(true);
 
             nav_content = '';
             mobile_menu_content = '';
 
-            $navbar.children('ul').each(function(){
+            $navbar.children('ul').each(function() {
 
                 content_buff = $(this).html();
                 nav_content = nav_content + content_buff;
@@ -186,7 +171,7 @@ pdp = {
 
             mobile_menu_initialized = true;
         } else {
-            if($(window).width() > 991){
+            if ($(window).width() > 991) {
                 // reset all the additions that we made for the sidebar wrapper only if the screen is bigger than 991px
                 $sidebar_wrapper.find('.navbar-form').remove();
                 $sidebar_wrapper.find('.nav-mobile-menu').remove();
@@ -195,32 +180,32 @@ pdp = {
             }
         }
 
-        if(!toggle_initialized){
+        if (!toggle_initialized) {
             $toggle = $('.navbar-toggle');
 
-            $toggle.click(function (){
+            $toggle.click(function() {
 
-                if(mobile_menu_visible == 1) {
+                if (mobile_menu_visible == 1) {
                     $('html').removeClass('nav-open');
 
                     $('.close-layer').remove();
-                    setTimeout(function(){
+                    setTimeout(function() {
                         $toggle.removeClass('toggled');
                     }, 400);
 
                     mobile_menu_visible = 0;
                 } else {
-                    setTimeout(function(){
+                    setTimeout(function() {
                         $toggle.addClass('toggled');
                     }, 430);
 
                     main_panel_height = $('.main-panel')[0].scrollHeight;
                     $layer = $('<div class="close-layer"></div>');
-                    $layer.css('height',main_panel_height + 'px');
+                    $layer.css('height', main_panel_height + 'px');
                     $layer.appendTo(".main-panel");
 
 
-                    setTimeout(function(){
+                    setTimeout(function() {
                         $layer.addClass('visible');
                     }, 100);
 
@@ -230,11 +215,11 @@ pdp = {
 
                         $layer.removeClass('visible');
 
-                         setTimeout(function(){
+                        setTimeout(function() {
                             $layer.remove();
                             $toggle.removeClass('toggled');
 
-                         }, 400);
+                        }, 400);
                     });
 
                     $('html').addClass('nav-open');
@@ -248,16 +233,16 @@ pdp = {
 
     },
 
-      initBootstrapNavbarMenu: debounce(function(){
+    initBootstrapNavbarMenu: debounce(function() {
 
-        if(!bootstrap_nav_initialized){
+        if (!bootstrap_nav_initialized) {
             $navbar = $('nav').find('.navbar-collapse').first().clone(true);
 
             nav_content = '';
             mobile_menu_content = '';
 
             //add the content from the regular header to the mobile menu
-            $navbar.children('ul').each(function(){
+            $navbar.children('ul').each(function() {
                 content_buff = $(this).html();
                 nav_content = nav_content + content_buff;
             });
@@ -276,25 +261,25 @@ pdp = {
             $navbar.find('button').removeClass('btn-round btn-fill btn-info btn-primary btn-success btn-danger btn-warning btn-neutral');
             $navbar.find('button').addClass('btn-simple btn-block');
 
-            $toggle.click(function (){
-                if(mobile_menu_visible == 1) {
+            $toggle.click(function() {
+                if (mobile_menu_visible == 1) {
                     $('html').removeClass('nav-open');
 
                     $('.close-layer').remove();
-                    setTimeout(function(){
+                    setTimeout(function() {
                         $toggle.removeClass('toggled');
                     }, 400);
 
                     mobile_menu_visible = 0;
                 } else {
-                    setTimeout(function(){
+                    setTimeout(function() {
                         $toggle.addClass('toggled');
                     }, 430);
 
                     $layer = $('<div class="close-layer"></div>');
                     $layer.appendTo(".wrapper-full-page");
 
-                    setTimeout(function(){
+                    setTimeout(function() {
                         $layer.addClass('visible');
                     }, 100);
 
@@ -305,11 +290,11 @@ pdp = {
 
                         $layer.removeClass('visible');
 
-                         setTimeout(function(){
+                        setTimeout(function() {
                             $layer.remove();
                             $toggle.removeClass('toggled');
 
-                         }, 400);
+                        }, 400);
                     });
 
                     $('html').addClass('nav-open');
@@ -330,14 +315,15 @@ pdp = {
 // leading edge, instead of the trailing.
 
 function debounce(func, wait, immediate) {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		clearTimeout(timeout);
-		timeout = setTimeout(function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		}, wait);
-		if (immediate && !timeout) func.apply(context, args);
-	};
+    var timeout;
+    return function() {
+        var context = this,
+            args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        }, wait);
+        if (immediate && !timeout) func.apply(context, args);
+    };
 };

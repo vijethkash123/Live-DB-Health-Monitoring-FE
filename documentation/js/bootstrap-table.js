@@ -1,18 +1,9 @@
-/**
- * @author zhixin wen <wenzhixin2010@gmail.com>
- * version: 1.8.1
- * https://github.com/wenzhixin/bootstrap-table/
- */
 
 ! function ($) {
     'use strict';
 
-    // TOOLS DEFINITION
-    // ======================
-
     var cachedWidth = null;
 
-    // it only does '%s', and return '' when arguments are undefined
     var sprintf = function (str) {
         var args = arguments,
             flag = true,

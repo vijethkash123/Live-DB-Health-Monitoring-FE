@@ -24,9 +24,8 @@ export class DashboardComponent implements OnInit {
     this.counter=0;
     setInterval(() =>{
     this.x=this.Dindex[this.counter]
-    //console.log(this.Dindex[2]);
     this.counter++;
-    if (this.counter > 6) { this.counter = 0 };
+    if (this.counter >= 6) { this.counter = 0 };
     },2000);
 
   }

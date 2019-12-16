@@ -10,8 +10,9 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class DashboardComponent implements OnInit {
-
-
+  public counter: any;
+  public x: any;
+  Dindex= ['Matheson : 2.03','SAP : 2.15','Trader Joes : 1.72','Coats : 2.32','Walmart : 2.71','Lineage: 2.04'];
   project_data: any[];
   codex_data: any;
   isCodex: boolean;
@@ -19,15 +20,23 @@ export class DashboardComponent implements OnInit {
   isDi: boolean;
   isWelcome: boolean;
   constructor(private http: HttpClient) {
+      
+    this.counter=0;
+    setInterval(() =>{
+    this.x=this.Dindex[this.counter]
+    //console.log(this.Dindex[2]);
+    this.counter++;
+    if (this.counter > 6) { this.counter = 0 };
+    },2000);
 
   }
 
 
   ngOnInit() {
-
     this.project({ "cmd_id": "project_data" });
     this.codex({ "cmd_id": "codex_data" })
     this.isWelcome=true;
+ 
   }
 
 

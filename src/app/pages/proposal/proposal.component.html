@@ -147,11 +147,17 @@
       </table>
       <br>
     </mat-tab>
-    <mat-tab label="Establish Purpose strategy">
+   
+   
 
-
+   
+    <mat-tab>
+        <ng-template mat-tab-label>
+           <span (click)="main()"> Establish purpose Strategy</span>
+          </ng-template>
       <br>
       <br>
+      <div *ngIf="show">
       <table border=1 bordercolor="#DCDCDC" rules=all>
         <tr style="color:#367fa9">
           <th>Phase:</th>
@@ -190,7 +196,7 @@
       <table border=1 rules=all>
         <tr>
           <td>
-            <a href="ProposalEstablishPurposeStrategysub1.html">Analyze Client Needs and Documentation</a>
+            <a (click)="toggle1()" style="text-decoration: underline;cursor:pointer">Analyze Client Needs and Documentation</a>
           </td>
           <td>To understand the fundamental information about a client's needs and requirements from an available
             request for proposal (RFP) or information provided by the client or other sources, and determine how BRILLIO
@@ -198,25 +204,286 @@
         </tr>
 
         <tr>
-          <td><a href="ProposalEstablishPurposeStrategysub2.html">Define a Winning Strategy</a></td>
+          <td><a (click)="toggle2()" style="text-decoration: underline;cursor:pointer">Define a Winning Strategy</a></td>
           <td>To identify and document successful strategies and elements that will be used in the development of the
             winning proposal.</td>
         </tr>
         <tr>
-          <td><a href="ProposalEstablishPurposeStrategysub3.html">Prepare Proposal Work Plan</a></td>
+          <td><a (click)="toggle3()" style="text-decoration: underline;cursor:pointer">Prepare Proposal Work Plan</a></td>
           <td>To establish an action plan, timeline, milestones, and related deliverables, and meet time constraints
             outlined by the client's request or "unsolicited" bid.</td>
         </tr>
 
         <tr>
-          <td><a href="ProposalEstablishPurposeStrategysub4.html">Identify Proposal Team</a></td>
+          <td><a (click)="toggle4()" style="text-decoration: underline;cursor:pointer">Identify Proposal Team</a></td>
           <td>To select members with the right skill sets and expertise to gather information and prepare documents and
             presentations that will be used to demonstrate that our approach and solution is best for our client.</td>
         </tr>
       </table>
+    </div>
 
+      <div *ngIf="p1">
+        <span class="fa fa-arrow-circle-left" style="float: right;font-size: 30px;cursor: pointer;" (click)="main()"></span>
+        <br>
+        <div class="row">
+        <div class="col-lg-11 col-xs-11">
+        
+        <table border=1 bordercolor="#DCDCDC"rules=all  >
+        <tr  style="color:#367fa9">
+        <th>Phase:</th>
+        <th>Activity:</th>
+        <th>Sub-Activity:</th>
+        </tr>
+        <tr>
+        <th>Proposal   </th>
+        <th>Establish Proposal Strategy and Work Plan        </th>
+        <th>Analyze Client Needs and Documentation</th>
+        
+        </tr>
+        </table>
+        </div>
+        <div class="col-lg-1 col-xs-1">
+        
+          <a href="ProposalEstablishPurposeStrategy.HTML">
+        <div class="glyphicon glyphicon-circle-arrow-left fa-2x"></div>
+        </a>
+        </div>
+        </div>
+    
+    <h4 style="color:#367fa9"> Objective</h4>
+    <p>To understand the fundamental information about a client's needs and requirements from an available request for proposal (RFP) or information provided by the client or other sources, and determine how BRILLIO can offer a solution.</p>
+    <h4 style="color:#367fa9">Description</h4>
+    <p>Project opportunities result from a client's business requirements, and it is important to examine these opportunities to determine BRILLIO's ability to provide a solution, as well as our chances of winning, before making a significant investment in the preparation of a formal proposal.</p>
+    <p>Opportunities may present themselves via a formal RFP or an informal request from the client or through a decision by BRILLIO to submit an "unsolicited" proposal</p>
+    <p>Based on the opportunity and available information, either from the RFP or client or other sources (e.g. other BRILLIO members, teaming partners), an analysis is required to understand the underlying business drivers and requirements to determine how BRILLIO can offer a solution. All available information needs to be reviewed. The RFP alone seldom contains enough information.</p>
+    <p>The analysis of information is performed by examining a combination of the following:</p>
+    <ul>
+    <li>Pre-sales activities through the value positioning of BRILLIO services; </li>
+    <li>	Formal RFP and information as provided by client, other BRILLIO members, subject matter experts and teaming partners; </li>
+    <li>Knowledge of the client needs, business, organization, financial health, budget or IS/IT environment; </li>
+    <li>	Available documentation or information (either client-provided or on record, e.g. processes and procedures); 
+     </li>
+    <li>IS/IT assets needed for system integration projects, e.g. hardware, software, applications, network components and design; </li>
+    <li>	Known external contacts, alliances, teaming partners;  </li>
+    <li>Resource availability to pursue the opportunity and/or ability to meet the requirements </li>
+    <li>Known costs and caveats associated with the management of the project; </li>
+    <li>Risk identification and assessment of circumstances surrounding the opportunity. </li>
+    </ul>
+    <p>During the analysis of the opportunity, it is important to assess BRILLIO's ability to provide a solution. This can be accomplished either internally or through the use of strategic alliances with other service delivery organizations that would be involved.</p>
+    <p>It is also important to evaluate the risks and associated impacts to BRILLIO, as well as the costs of providing the proposal and ongoing project, against the potential revenue. Being able to determine when anticipated profits will result and how those profits will be achieved is key to a bid/no bid decision.</p>
+    <p>All opportunities come with certain elements of risk. Determining those risks and the potential impacts should help in implementing mitigation strategies (where possible) to minimize or avoid certain risks and should contribute to the overall success of this opportunity. Elements of risk include the following:</p>
+    <ul>
+    <li>Financial, e.g. budget limitations, investments, performance bonds, leases and incentive/penalty clauses;  </li>
+    <li>Human resources, e.g. number of individuals needed, cost, experience and expertise;  </li>
+    <li>Schedule, e.g. project delivery schedule, milestones imposed or escape clauses; </li>
+    <li>Team, e.g. project team composition and capabilities, experience and integration with client team; </li>
+    <li>Technical, e.g. BRILLIO experience with the project technological environment gathered from other contracts:. </li>
+    <li>End-user, e.g. acceptance by the client or client's end-user community, experience and end-user representation. </li>
+    </ul>
+    <p>Being able to assess the risks, impacts, and associated costs should guide us during the estimation of the overall costs for this opportunity. Knowing all costs involved with the proposal and using the Win Probability Matrix should provide for an informed decision-making process and determine a bid/no bid decision, as well as our chances of winning this engagement.
+    </p>
+    <p>
+    The final decision to respond to an RFP is made by a BRILLIO manager in accordance with the level of authority established for customer engagements in the Operations Management Framework (OMF). If the decision is made to bid, a formal communication (e.g. a letter) should be transmitted to the client representative, informing him or her of our intention to answer the request.</p>
+    <p>
+    It is important to evaluate the risks and impacts to BRILLIO and make an informed decision as to whether to proceed with presenting the proposal to the client. The costs of obtaining this business must be weighed against the potential revenue. As soon as the opportunity has been sized and key budget elements are known, appropriate approvals must be obtained as per the levels specified in the BRILLIO Operations Management Framework (OMF). Keeping the approver(s) informed during the progress of this phase will help reduce the period required to obtain their approval.
+    </p>
+    <p>
+    If the decision is not to bid and if the client was expecting a BRILLIO proposal, a formal communication (e.g. a letter) should be transmitted to the client representative (this can also be preceded by an informal contact from the individual responsible for the management of the account). Final decision not to enter into an agreement with a client should be reviewed with the identified manager's superior prior to client communications.
+    </p>
+    <p>Ensure that all analysis is documented for future reference and that issues requiring further clarification are noted and addressed in later activities and phases.</p>
+    
+    <h4 style="color:#367fa9"> Documents</h4>
+    <table border=1 rules=cols >
+    <tr>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Template</th>
+    </tr>
+    
+    <tr>
+    <td>Input</td>
+    <td>Request for Proposal</td>
+    <td>Not Applicable</td>
+    </tr>
+    <tr>
+    <td></td>
+    <td> Client Documentation</td>
+    <td>Not Applicable</td>
+    </tr>
+    
+    
+    <tr>
+    <td>Output</td>
+    <td>Win Probability Matrix</td>
+    <td>Documet</td>
+    </tr>
+    
+    <tr>
+    <td></td>
+    <td>Project Proposal Analysis Summary</td>
+    <td>Documet</td>
+    </tr>
+    
+    <tr>
+    <td></td>
+    <td>Bid/No Bid Decision Letter</td>
+    <td>Not Applicable</td>
+    </tr>
+    </table>
+    <h4 style="color:#367fa9">Synchronization Points</h4>
+    
+    
+      </div>
 
-    </mat-tab>
+      <div *ngIf="p2">
+        <span class="fa fa-arrow-circle-left" style="float: right;font-size: 30px;cursor: pointer;" (click)="main()"></span>
+        <br>
+        <div class="row">
+        <div class="col-lg-11 col-xs-11">
+        
+        <table border=1 bordercolor="#DCDCDC"rules=all  >
+        <tr  style="color:#367fa9">
+        <th>Phase:</th>
+        <th>Activity:</th>
+        <th>Sub-Activity:</th>
+        </tr>
+        <tr>
+        <th>Proposal   </th>
+        <th>Establish Proposal Strategy and Work Plan        </th>
+        <th>Define Winning Strategy</th>
+        
+        </tr>
+        </table>
+        </div>
+        <div class="col-lg-1 col-xs-1">
+        
+          <a href="ProposalEstablishPurposeStrategy.HTML">
+        <div class="glyphicon glyphicon-circle-arrow-left fa-2x"></div>
+        </a>
+        </div>
+        </div>
+
+<h4 style="color:#367fa9"> Objective</h4>
+<p>To identify and document successful strategies and elements that will be used in the development of the winning proposal.</p>
+<h4 style="color:#367fa9">Description</h4>
+<p>Having completed the analysis of the client's needs and associated risks of this Project opportunity, this next activity is performed to draw out or highlight winning strategies or ideas that will help define and build the successful proposal.</p>
+<p>The type and number of winning strategies chosen, and the degree of complexity will vary, based on the size and scope of the requirements, provided either through the client's RFP or information provided by the client or other sources (e.g. other BRILLIO members, teaming partners). To build a successful strategy, you need to identify BRILLIO's strengths and weaknesses, measure the impacts to BRILLIO, and plan for the risks using contingencies, while meeting the client's objectives.</p>
+<p>Elements to gather and incorporate for a winning proposal may include the following:</p>
+<ul>
+    <li>Subject matter experts (SMEs) to assist with solution and proposal development; </li>
+    <li>BRILLIO's value statements, marketing and quality information, expertise and skills; </li>
+    <li>Strategic alliances and partnerships for project delivery; </li>
+    <li>External marketplace information and reports, i.e. Gartner and META Groups; </li>
+    <li>Industry and best practices in use or planned for use that target the project; </li>
+    <li>Existing costs and pricing information for the opportunity</li>
+    <li>Delivery commitments that BRILLIO will offer or currently provides; </li>
+    <li>Risk mitigation strategies identified or in place; </li>
+    <li>Known BRILLIO weaknesses and corrective measures that can be implemented; </li>
+    <li>Client references and testimonials, with examples of similar success stories. </li>
+ 
+</ul>
+<p>Preparation and organization of the proposal will be reflected in the end result. It is extremely important that all teams and resources have similar information and an understanding of the requirements and have adequate time to prepare for the building of the winning proposal.</p>
+    <p>In order to win, you need to convince clients that BRILLIO's service offers the best value. This includes convincing them that we have the ability to deliver. It is likely there will be competitors who have similar capabilities. In order to win, we must demonstrate equivalent or better capabilities than our competitors. We should also be able to identify one or more unique strengths that distinguish BRILLIO from the competition. Focus on unique aspects of our solution or capabilities in terms of a tangible advantage to the client (and not just "BRILLIO is one of the largest…" This may be true, but the client needs to know why this would be an advantage).</p>
+</div>
+
+<div *ngIf="p3">
+  <span class="fa fa-arrow-circle-left" style="float: right;font-size: 30px;cursor: pointer;" (click)="main()"></span>
+  <br>
+  <div class="row">
+  <div class="col-lg-11 col-xs-11">
+ 
+<table border=1 bordercolor="#DCDCDC"rules=all  >
+<tr  style="color:#367fa9">
+<th>Phase:</th>
+<th>Activity:</th>
+<th>Sub-Activity:</th>
+</tr>
+<tr>
+<th>Proposal   </th>
+<th>Establish Proposal Strategy and Work Plan        </th>
+<th>Identify Proposal Team</th>
+
+</tr>
+</table>
+</div>
+<div class="col-lg-1 col-xs-1">
+
+    <a href="ProposalEstablishPurposeStrategy.HTML">
+<div class="glyphicon glyphicon-circle-arrow-left fa-2x"></div>
+  </a>
+  </div>
+</div>
+
+<h4 style="color:#367fa9"> Objective</h4>
+<p>To select members with the right skill sets and expertise to gather information and prepare documents and presentations that will be used to demonstrate that our approach and solution is best for our client.</p>
+<h4 style="color:#367fa9">Description</h4>
+<P>This sub-activity is to identify the individuals and their involvement in the proposal team. It is important to select members with the right skill sets and expertise from each of the project scope areas required. The team should include members from the financial, technical and business sectors involved. The types of skills normally required are those that support:</P>
+<UL>
+    <li>architecture of the solution; </li>
+    <li>writing of technical chapters; </li>
+    <li>creation of charts, graphics, and illustrations; </li>
+    <li>estimation of effort; </li>
+    <li>determination of costing and pricing; </li>
+    <li>financial proposal; </li>
+    <li>procurement of subcontractors, suppliers and teaming partners; </li>
+    <li>contract terms and conditions; </li>
+    <li>editing and publication. </li>
+   
+</UL>
+<p>Their tasks will include gathering information and preparing documents and presentations, which will be used to demonstrate that our approach and solution is the best for our client.</p>
+<p>Time constraints often occur, especially when the opportunity is presented by an RFP or competitive situations that require urgent action. It is imperative that team members be informed as early as possible of their involvement and maximize their time to understand the information and requirements. As such constraints are often unavoidable and imposed, team focus is critical for the preparation of a winning proposal in an expedient manner. During the proposal preparation, quick, daily situation review meetings are suggested to maintain momentum and circulate all available information to all team members.</p>
+<p>Additional resources or subject matter experts may be required at later stages in the Proposal phase. Appropriate coordination is needed to ensure they are available and are briefed on current issues.</p>
+</div>
+<div *ngIf="p4">
+  <span class="fa fa-arrow-circle-left" style="float: right;font-size: 30px;cursor: pointer;" (click)="main()"></span>
+  <br>
+  <div class="row">
+  <div class="col-lg-11 col-xs-11">
+ 
+<table border=1 bordercolor="#DCDCDC"rules=all  >
+<tr  style="color:#367fa9">
+<th>Phase:</th>
+<th>Activity:</th>
+<th>Sub-Activity:</th>
+</tr>
+<tr>
+<th>Proposal   </th>
+<th>Establish Proposal Strategy and Work Plan        </th>
+<th>Identify Proposal Team</th>
+
+</tr>
+</table>
+</div>
+<div class="col-lg-1 col-xs-1">
+
+    <a href="ProposalEstablishPurposeStrategy.HTML">
+<div class="glyphicon glyphicon-circle-arrow-left fa-2x"></div>
+  </a>
+  </div>
+</div>
+
+<h4 style="color:#367fa9"> Objective</h4>
+<p>To select members with the right skill sets and expertise to gather information and prepare documents and presentations that will be used to demonstrate that our approach and solution is best for our client.</p>
+<h4 style="color:#367fa9">Description</h4>
+<P>This sub-activity is to identify the individuals and their involvement in the proposal team. It is important to select members with the right skill sets and expertise from each of the project scope areas required. The team should include members from the financial, technical and business sectors involved. The types of skills normally required are those that support:</P>
+<UL>
+    <li>architecture of the solution; </li>
+    <li>writing of technical chapters; </li>
+    <li>creation of charts, graphics, and illustrations; </li>
+    <li>estimation of effort; </li>
+    <li>determination of costing and pricing; </li>
+    <li>financial proposal; </li>
+    <li>procurement of subcontractors, suppliers and teaming partners; </li>
+    <li>contract terms and conditions; </li>
+    <li>editing and publication. </li>
+   
+</UL>
+<p>Their tasks will include gathering information and preparing documents and presentations, which will be used to demonstrate that our approach and solution is the best for our client.</p>
+<p>Time constraints often occur, especially when the opportunity is presented by an RFP or competitive situations that require urgent action. It is imperative that team members be informed as early as possible of their involvement and maximize their time to understand the information and requirements. As such constraints are often unavoidable and imposed, team focus is critical for the preparation of a winning proposal in an expedient manner. During the proposal preparation, quick, daily situation review meetings are suggested to maintain momentum and circulate all available information to all team members.</p>
+<p>Additional resources or subject matter experts may be required at later stages in the Proposal phase. Appropriate coordination is needed to ensure they are available and are briefed on current issues.</p> 
+</div>
+
+</mat-tab>
     <mat-tab label="Prepare & SignNDA">
 
 

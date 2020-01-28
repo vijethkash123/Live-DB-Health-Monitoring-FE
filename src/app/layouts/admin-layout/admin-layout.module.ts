@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatTableModule} from '@angular/material';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
@@ -21,7 +22,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
     NgbModule,
-    MatTabsModule
+    MatTabsModule,
+    MatTableModule
   ],
   declarations: [
     DashboardComponent,

@@ -1,0 +1,11 @@
+.example-container {
+  height: 80vh;
+  width: 100% !important;
+	overflow: auto !important;
+  }
+table {
+  width: 100% !important;
+}
+
+
+

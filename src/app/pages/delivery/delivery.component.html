@@ -14,94 +14,177 @@
       Welcome to the Transition section, below are the list of activities to be followed in a managed services
       transition.
     </mat-tab>
-    <mat-tab label="Start-up Project">
+
+
+
+
+
+
+
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span (click)="main()">Start-up Project</span>
+      </ng-template>
       <br>
-      <table border=1 bordercolor="#DCDCDC" rules=all>
-        <tr style="color:#367fa9">
+      <div *ngIf="show">
+        <table border=1 bordercolor="#DCDCDC" rules=all>
+          <tr style="color:#367fa9">
+            <th>Phase:</th>
+            <th>Activity:</th>
+
+          </tr>
+          <tr>
+            <th>Delivery </th>
+            <th>Start-up Project </th>
+
+          </tr>
+        </table>
+
+        <h4 style="color:#367fa9"> Objective</h4>
+        <p> To establish the management environment in which the project will be executed.</p>
+        <h4 style="color:#367fa9">Description</h4>
+        <p>Performing the Start-up-activity is essential to clearly establishing how the project will be set-up and
+          therefore facilitates the project's execution and control activities. It also facilitates communication and
+          relationships that must be established with the project stakeholders throughout the project's execution.</p>
+        <p>In all projects where BRILLIO is responsible in whole or in part for the outcome, the project Start-up
+          activity
+          and particularly the preparation of the Project Plan are highly recommended. In working environments where
+          business and project management processes are already documented (e.g. BRILLIO business units and outsourcing
+          services engagements including project management processes), only the key and specific elements of the
+          Project
+          Plan (e.g. project definition, scope, assumptions, organizational structure and work plan) need to be
+          documented. Project scope, size, complexity, risk, strategic value and BRILLIO management requirements should
+          guide the decision to prepare a Project Plan.</p>
+        <p>If the project is using open source software, review the Open Source Checklist as a reminder of management
+          activities related to open source software usage during the Delivery phase.</p>
+        <p>The Start-up activity can be performed in the following situations:</p>
+        <ul>
+          <li>For project delivery to a client; </li>
+          <li>For BRILLIO's internal projects; </li>
+          <li>For the execution of some phases of the Client Partnership Management Framework, such as the preparation
+            of
+            a proposal, due diligence and transition. These phases are considered and conducted as projects; </li>
+          <li>For a project that is derived from an Outsourcing Services engagement, the project can be part of the
+            contract (e.g. part of the contract schedules or part of an annual work program, open delivery budget), or
+            can
+            arise in the course of the engagement evolution. </li>
+          <li></li>
+        </ul>
+        <p>The Start-up activity consists of the following sub-activities:</p>
+        <ul>
+          <li>Confirm the project work environnement within which will work the project team and will have an implact on
+            the work methods; </li>
+          <li>Preparing the Project Plan, describing the scope, assumptions, management organizational structure,
+            management processes and work plan; </li>
+          <li>Reviewing the document to verify its compliance with previous phases requirements and project management
+            guidelines and obtaining approvals; </li>
+          <li>Confirming the assignment of project team members. </li>
+          <li></li>
+        </ul>
+        <p>The "Legal Framework for Proposals and Contracts" mentioned in the "References" section will assist you in
+          reviewing the essential clauses of the agreements that are usually signed by BRILLIO. If you need
+          clarification
+          or a better understanding of any particular clause, do not hesitate to contact our in-house legal counsel.</p>
+
+        <h4 style="color:#367fa9"> Sub-Activities</h4>
+        <table border=1 rules=all>
+          <tr>
+            <td>
+              <a (click)="toggle1()" style="text-decoration: underline;cursor:pointer">Confirm Project Work
+                Environment</a>
+            </td>
+            <td>To confirm that the office space, hardware, software, hard copy files, software directories, and
+              communication tools are established.</td>
+          </tr>
+          <tr>
+            <td>
+              <a (click)="toggle2()" style="text-decoration: underline;cursor:pointer"> Prepare Project Plan</a>
+            </td>
+            <td>To prepare the Project Plan and its related documents.</td>
+          </tr>
+          <tr>
+            <td>
+              <a (click)="toggle3()" style="text-decoration: underline;cursor:pointer">Review and Approve Project
+                Plan</a>
+            </td>
+            <td>To review the Project Plan in order to verify its compliance with the previous phases' requirements and
+              project management guidelines. To obtain the appropriate approvals for the Project Plan from the client
+              and
+              BRILLIO Management.</td>
+          </tr>
+          <tr>
+            <td>
+              <a (click)="toggle4()" style="text-decoration: underline;cursor:pointer">Confirm Project Team
+                Assignment</a>
+            </td>
+            <td>To confirm the assignment of the individuals who will execute the project.</td>
+          </tr>
+        </table>
+        <br>
+      </div>
+      <div *ngIf="p1">
+        <span class="fa fa-arrow-circle-left" style="float: right;font-size: 30px;cursor: pointer;"
+          (click)="main()"></span>
+          <br>
+          <div class="row">
+          <div class="col-lg-11 col-xs-11">
+          
+          <table border=1 bordercolor="#DCDCDC"rules=all  >
+          <tr  style="color:#367fa9">
           <th>Phase:</th>
           <th>Activity:</th>
-
-        </tr>
-        <tr>
-          <th>Delivery </th>
-          <th>Start-up Project </th>
-
-        </tr>
+          <th>Sub-Activity:</th>
+          </tr>
+      <tr>
+      <th>Delivery</th>
+      <th>Start-up Project</th>
+      <th>Confirm Project Work Environment</th>
+      
+      </tr>
       </table>
-
+      </div>
+      <div class="col-lg-1 col-xs-1">
+      
+          <a href="Start-upProject.HTML">
+      <div class="	glyphicon glyphicon-circle-arrow-left fa-2x"></div>
+        </a>
+        </div>
+      </div>
+      
       <h4 style="color:#367fa9"> Objective</h4>
-      <p> To establish the management environment in which the project will be executed.</p>
+      <p>To confirm that the office space, hardware, software, tools, hard copy files, software directories, and communication tools (e.g., telephone, fax, printers, copiers) are estabished and available to the project team.</p>
       <h4 style="color:#367fa9">Description</h4>
-      <p>Performing the Start-up-activity is essential to clearly establishing how the project will be set-up and
-        therefore facilitates the project's execution and control activities. It also facilitates communication and
-        relationships that must be established with the project stakeholders throughout the project's execution.</p>
-      <p>In all projects where BRILLIO is responsible in whole or in part for the outcome, the project Start-up activity
-        and particularly the preparation of the Project Plan are highly recommended. In working environments where
-        business and project management processes are already documented (e.g. BRILLIO business units and outsourcing
-        services engagements including project management processes), only the key and specific elements of the Project
-        Plan (e.g. project definition, scope, assumptions, organizational structure and work plan) need to be
-        documented. Project scope, size, complexity, risk, strategic value and BRILLIO management requirements should
-        guide the decision to prepare a Project Plan.</p>
-      <p>If the project is using open source software, review the Open Source Checklist as a reminder of management
-        activities related to open source software usage during the Delivery phase.</p>
-      <p>The Start-up activity can be performed in the following situations:</p>
-      <ul>
-        <li>For project delivery to a client; </li>
-        <li>For BRILLIO's internal projects; </li>
-        <li>For the execution of some phases of the Client Partnership Management Framework, such as the preparation of
-          a proposal, due diligence and transition. These phases are considered and conducted as projects; </li>
-        <li>For a project that is derived from an Outsourcing Services engagement, the project can be part of the
-          contract (e.g. part of the contract schedules or part of an annual work program, open delivery budget), or can
-          arise in the course of the engagement evolution. </li>
-        <li></li>
-      </ul>
-      <p>The Start-up activity consists of the following sub-activities:</p>
-      <ul>
-        <li>Confirm the project work environnement within which will work the project team and will have an implact on
-          the work methods; </li>
-        <li>Preparing the Project Plan, describing the scope, assumptions, management organizational structure,
-          management processes and work plan; </li>
-        <li>Reviewing the document to verify its compliance with previous phases requirements and project management
-          guidelines and obtaining approvals; </li>
-        <li>Confirming the assignment of project team members. </li>
-        <li></li>
-      </ul>
-      <p>The "Legal Framework for Proposals and Contracts" mentioned in the "References" section will assist you in
-        reviewing the essential clauses of the agreements that are usually signed by BRILLIO. If you need clarification
-        or a better understanding of any particular clause, do not hesitate to contact our in-house legal counsel.</p>
-
-      <h4 style="color:#367fa9"> Sub-Activities</h4>
-      <table border=1 rules=all>
-        <tr>
-          <td>
-            <a href="Start-upProjectsubact1.html">Confirm Project Work Environment</a>
-          </td>
-          <td>To confirm that the office space, hardware, software, hard copy files, software directories, and
-            communication tools are established.</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="Start-upProjectsubact2.html"> Prepare Project Plan</a>
-          </td>
-          <td>To prepare the Project Plan and its related documents.</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="Start-upProjectsubact3.html">Review and Approve Project Plan</a>
-          </td>
-          <td>To review the Project Plan in order to verify its compliance with the previous phases' requirements and
-            project management guidelines. To obtain the appropriate approvals for the Project Plan from the client and
-            BRILLIO Management.</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="Start-upProjectsubact4.html">Confirm Project Team Assignment</a>
-          </td>
-          <td>To confirm the assignment of the individuals who will execute the project.</td>
-        </tr>
-      </table>
-      <br>
+      <p>This sub-activity addresses the physical set-up of the facilities for the project. These facilities may be provided by the client or by BRILLIO, or by a combination of the client and BRILLIO, depending on the specific contractual arrangement. They include office space, any required access to secured client premises, tools, hardware (e.g., workstations, servers, etc), software, and communication tools, such as telephones, fax, printers, copiers.</p>
+      <p>This sub-activity also includes setting up the appropriate hard copy files and/or soft-copy directories, so that project data can be appropriately maintained and accessed. This data may include not only deliverables, but also interim work products, project correspondence, meeting minutes, internal documents, etc. Be sure to respect any security requirements in the contractual agreement with the client that pertain to handling information assets.</p>
+      <p>In situations where multiple teams or groups need to collaborate, this sub-activity addresses how access to appropriate information that must be shared will be set up and maintained.</p>
+      <h4 style="color:#367fa9">Synchronization Points</h4>
+      </div>
+      <div *ngIf="p2">
+        <span class="fa fa-arrow-circle-left" style="float: right;font-size: 30px;cursor: pointer;"
+          (click)="main()"></span>
+          <h4 style="color:#367fa9">Synchronization Points</h4>
+      </div>
+      <div *ngIf="p3">
+        <span class="fa fa-arrow-circle-left" style="float: right;font-size: 30px;cursor: pointer;"
+          (click)="main()"></span>
+          <h4 style="color:#367fa9">Synchronization Points</h4>
+      </div>
+      <div *ngIf="p4">
+        <span class="fa fa-arrow-circle-left" style="float: right;font-size: 30px;cursor: pointer;"
+          (click)="main()"></span>
+          <h4 style="color:#367fa9">Synchronization Points</h4>
+      </div>
     </mat-tab>
+
+
+
+
+
+
+
+
+
     <mat-tab label="Execute and Control Project">
       <br>
       <table border=1 bordercolor="#DCDCDC" rules=all>

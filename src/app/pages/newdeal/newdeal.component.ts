@@ -67,12 +67,6 @@ export class NewdealComponent implements OnInit {
   
   }
 
-  data_update(deals, row_json, hour){
-    this.update_table_data     = row_json;
-    this.update_header = hour;
-    this.current_tab   = deals;
-    console.log(row_json,hour,deals)
-}
 
   getData(rData){
     return this.http.post('http://13.126.189.69:80/dev-api/BP', JSON.stringify(rData), {headers : new HttpHeaders({ 'Content-Type': 'application/json' })});

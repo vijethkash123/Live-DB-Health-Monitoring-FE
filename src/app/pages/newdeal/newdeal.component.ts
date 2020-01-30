@@ -46,7 +46,7 @@ export class NewdealComponent implements OnInit {
 }
 
   ngOnInit() {
-    this.get_deals_data({'cmd_id':'get_data'});
+    this.get_deals_data({"cmd_id":"get_data"});
   }
 
   get_deals_data(rData){
@@ -67,6 +67,13 @@ export class NewdealComponent implements OnInit {
   
   }
 
+  data_update(tab, row_json, header){
+    this.update_table_data     = row_json;
+    this.update_header = header;
+    this.current_tab   = tab;
+    
+}
+
 
   getData(rData){
     return this.http.post('http://13.126.189.69:80/dev-api/BP', JSON.stringify(rData), {headers : new HttpHeaders({ 'Content-Type': 'application/json' })});
@@ -74,9 +81,18 @@ export class NewdealComponent implements OnInit {
 
 
 
-   onSubmit (form:NgForm){
-   
-console.log(form);
-   }
+   onSubmit (dealsform:NgForm){
+   console.log(dealsform);
+  this.getData(dealsform).subscribe((data:any) => {
+  if (this.current_tab.toLowerCase() == "deals")
+  {
+    // this.dataSource  = data.data;
+    this.get_deals_data({"cmd_id":"get_data"});
+  }
+   },
+   error => { 
+    console.log("Error");
+  });
+}
 
 }

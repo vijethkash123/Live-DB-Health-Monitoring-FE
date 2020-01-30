@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ToastrModule } from "ngx-toastr";
 import {MatTabsModule} from '@angular/material';
+import { MatFormFieldModule} from '@angular/material';
 import {MatTableModule} from '@angular/material';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { NavbarModule} from './shared/navbar/navbar.module';
@@ -13,6 +14,7 @@ import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import {HttpClient,HttpClientModule} from '@angular/common/http';
+import { from } from 'rxjs';
 
 
 @NgModule({
@@ -23,7 +25,7 @@ import {HttpClient,HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserAnimationsModule,
     MatTabsModule,
-    MatTableModule,
+    MatTableModule,MatFormFieldModule,
     RouterModule.forRoot(AppRoutes,{
       useHash: true
     }),

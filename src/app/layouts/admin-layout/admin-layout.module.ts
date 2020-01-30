@@ -1,9 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatExpansionModule,MatIconModule} from '@angular/material';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTableModule} from '@angular/material';
+import { MatFormFieldModule} from '@angular/material';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
@@ -15,6 +22,8 @@ import { DeliveryComponent }   from '../../pages/delivery/delivery.component';
 import {NewdealComponent} from '../../pages/newdeal/newdeal.component';
 import {RenewalComponent} from '../../pages/renewal/renewal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+
 
 @NgModule({
   imports: [
@@ -23,7 +32,18 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     NgbModule,
     MatTabsModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatChipsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatExpansionModule,
+    MatIconModule, ReactiveFormsModule
+  
+
+
   ],
   declarations: [
     DashboardComponent,

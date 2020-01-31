@@ -21,6 +21,9 @@ export class NewdealComponent implements OnInit {
   PSD:string='';
   PED:string='';
 
+  display='none';
+
+  close_submit:boolean;
 
   dataSource: any;
   displayedColumns = [];
@@ -28,6 +31,8 @@ export class NewdealComponent implements OnInit {
   public update_table_data:any =[];
   public current_tab:any = [];
   update_header:any[];
+  
+ 
   
   constructor(private http:HttpClient,private fb: FormBuilder) { 
     this.dealsform = fb.group({  
@@ -86,13 +91,16 @@ export class NewdealComponent implements OnInit {
   this.getData(dealsform).subscribe((data:any) => {
   if (this.current_tab.toLowerCase() == "deals")
   {
-    // this.dataSource  = data.data;
+   
     this.get_deals_data({"cmd_id":"get_data"});
+    
   }
    },
    error => { 
     console.log("Error");
   });
 }
+
+
 
 }
